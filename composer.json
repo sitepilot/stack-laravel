@@ -13,7 +13,7 @@
   "scripts": {
     "post-create-project-cmd": [
       "docker compose up -d",
-      "docker compose exec app composer create-project laravel/laravel"
+      "docker compose exec app composer create-project laravel/laravel ."
     ]
   }
 }

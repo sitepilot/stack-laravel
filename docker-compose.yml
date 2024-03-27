@@ -5,6 +5,8 @@ services:
       - "traefik.enable=true"
       - "traefik.http.routers.${COMPOSE_PROJECT_NAME:?}.tls=true"
       - "traefik.http.routers.${COMPOSE_PROJECT_NAME:?}.rule=HostRegexp(`${COMPOSE_PROJECT_NAME:?}.{any:.+}`)"
+    environment:
+      NGINX_PUBLIC_DIR: 'public'
     volumes:
       - './:/app/files'
     networks:
