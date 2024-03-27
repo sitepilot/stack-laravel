@@ -1,0 +1,19 @@
+{
+  "name": "sitepilot/stack-laravel",
+  "description": "Laravel development stack.",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Sitepilot",
+      "email": "support@sitepilot.io"
+    }
+  ],
+  "require": {},
+  "scripts": {
+    "post-create-project-cmd": [
+      "docker compose up -d",
+      "docker compose exec app composer create-project laravel/laravel"
+    ]
+  }
+}
